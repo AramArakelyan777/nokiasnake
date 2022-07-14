@@ -15,7 +15,7 @@ snakeItem = 10
 coo1, coo2 = 25, 25
 nav1, nav2 = 0, 0
 snakeList = []
-snakeSize = 4
+snakeSize = 3
 foodList = []
 foodQuantity = 12
 
@@ -106,4 +106,4 @@ while True:
     snake(canvas, coo1, coo2)
     root.update_idletasks()
     root.update()
-    time.sleep(0.15)
+    time.sleep(0.1)
