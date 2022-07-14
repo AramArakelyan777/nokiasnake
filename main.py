@@ -17,7 +17,7 @@ nav1, nav2 = 0, 0
 snakeList = []
 snakeSize = 3
 foodList = []
-foodQuantity = 12
+foodQuantity = 7
 
 for i in range(foodQuantity):
     x = rnd.randrange(50)
@@ -44,10 +44,11 @@ def delete():
 
 
 def findFood():
-    global snakeSize
+    global snakeSize, foodQuantity
     for i in range(len(foodList)):
         if foodList[i][0] == coo1 and foodList[i][1] == coo2:
             snakeSize += 1
+            foodQuantity -= 1
             canvas.delete(foodList[i][2])
 
 
@@ -97,6 +98,9 @@ def touchSelf(fX, fY):
 
 
 while True:
+    if foodQuantity < 0:
+        messagebox.showinfo("Thats it", "You won the game!")
+        exit()
     delete()
     findFood()
     borders()
