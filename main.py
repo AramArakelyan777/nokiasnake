@@ -17,7 +17,7 @@ nav1, nav2 = 0, 0
 snakeList = []
 snakeSize = 3
 foodList = []
-foodQuantity = 7
+foodQuantity = 20
 
 for i in range(foodQuantity):
     x = rnd.randrange(50)
