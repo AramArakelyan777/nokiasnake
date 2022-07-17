@@ -17,7 +17,7 @@ nav1, nav2 = 0, 0
 snakeList = []
 snakeSize = 3
 foodList = []
-foodQuantity = 20
+foodQuantity = 7
 
 for i in range(foodQuantity):
     x = rnd.randrange(50)
@@ -98,9 +98,6 @@ def touchSelf(fX, fY):
 
 
 while True:
-    if foodQuantity < 0:
-        messagebox.showinfo("Thats it", "You won the game!")
-        exit()
     delete()
     findFood()
     borders()
@@ -111,3 +108,6 @@ while True:
     root.update_idletasks()
     root.update()
     time.sleep(0.1)
+    if foodQuantity < 0:
+        messagebox.showinfo("Thats it", "You won the game!")
+        exit()
